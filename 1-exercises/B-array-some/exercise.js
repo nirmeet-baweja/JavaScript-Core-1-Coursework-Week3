@@ -6,11 +6,22 @@
   - Do not edit any of the existing code
 */
 
+// function to check if the given value is null
+function isNull(value)
+{
+  return value === null;
+}
+
 var pairsByIndex = [[0, 3], [1, 2], [2, 1], null, [3, 0]];
 
 // If there is a null value in the array exit the program with the error code
 // https://nodejs.org/api/process.html#process_process_exit_code
 // process.exit(1);
+if(pairsByIndex.some(isNull))
+{
+  console.log("pairsByIndex cannot contain null as a value.");
+  process.exit(1);
+}
 
 var students = ["Islam", "Lesley", "Harun", "Rukmini"];
 var mentors = ["Daniel", "Irina", "Mozafar", "Luke"];
