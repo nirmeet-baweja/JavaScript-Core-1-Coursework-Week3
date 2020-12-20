@@ -2,10 +2,17 @@
    This program should check if the array `group` contains only students
 */
 
+
 var students = ["Omar", "Austine", "Dany", "Swathi", "Lesley", "Rukmini"];
 var group = ["Austine", "Dany", "Swathi", "Daniel"];
 
-var groupIsOnlyStudents; // complete this statement
+// function to check if the name belongs to a student
+function isStudent(name)
+{
+  return students.includes(name);
+}
+
+var groupIsOnlyStudents = group.every(isStudent);
 
 if (groupIsOnlyStudents) {
   console.log("The group contains only students");
