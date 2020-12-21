@@ -6,9 +6,18 @@
   - Do not edit any of the existing code
 */
 
+// function to check the array length
+function isPair(arr)
+{
+  // check if the argument passed is an array
+  if(Array.isArray(arr))
+    return arr.length === 2; // check if the array has exactly 2 elements
+  return false;
+}
+
 var pairsByIndexRaw = [[0, 3], [1, 2], [2, 1], null, [1], false, "whoops"];
 
-var pairsByIndex; // Complete this statement
+var pairsByIndex = pairsByIndexRaw.filter(isPair);
 
 var students = ["Islam", "Lesley", "Harun", "Rukmini"];
 var mentors = ["Daniel", "Irina", "Mozafar", "Luke"];
