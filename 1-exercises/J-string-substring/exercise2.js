@@ -1,4 +1,4 @@
-/* 
+/*
   You are given an array with a list of names.
 
   You should log only the peoples first names.
@@ -14,22 +14,26 @@ let names = [
   "Arron Graham",
 ];
 
-names[0] = names[0].substring();
-names[1] = names[1].substring();
-names[2] = names[2].substring();
-names[3] = names[3].substring();
-names[4] = names[4].substring();
+for(let i=0; i < names.length; i++)
+{
+  // Extract the first name from the name
+  let firstName = names[i].split(" ", 1).join();
+
+  // Overwrite the name to contain only the first name
+  names[i] = names[i].substring(0, firstName.length);
+}
+
 
 names.forEach((name) => {
   console.log(name);
 });
 
-/* EXPECTED OUTPUT 
+/* EXPECTED OUTPUT
 
   "Tamzin"
   "Jessica"
   "Tony"
   "Shae"
   "Arron"
-  
+
 */
