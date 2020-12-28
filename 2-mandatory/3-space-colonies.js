@@ -12,10 +12,16 @@
         Input: Is an array
         Output: Is an array
         Logic: Only strings that start with A, and finish with family
-  
+
 */
 
-function colonisers() {}
+function colonisers(potentialColonisers)
+{
+  coloniserFamilies = potentialColonisers.filter(voyagerName =>
+    (voyagerName.search("family") > 0) && (voyagerName[0] === "A"));
+
+  return coloniserFamilies;
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
