@@ -17,7 +17,7 @@
 
 function colonisers(potentialColonisers)
 {
-  coloniserFamilies = potentialColonisers.filter(voyagerName =>
+  let coloniserFamilies = potentialColonisers.filter(voyagerName =>
     (voyagerName.search("family") > 0) && (voyagerName[0] === "A"));
 
   return coloniserFamilies;

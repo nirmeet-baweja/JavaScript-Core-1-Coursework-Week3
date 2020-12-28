@@ -23,7 +23,7 @@
 
 function bushChecker(bush)
 {
-  hasAllPinkBerries = bush.every(berry => berry === "pink");
+  let hasAllPinkBerries = bush.every(berry => berry === "pink");
 
   if(hasAllPinkBerries)
     return "Bush is safe to eat from";
