@@ -1,17 +1,28 @@
 /*
     Many years into the future, a team of Space Voyagers find their ship is low on Oxygen and need to dock
     somewhere safe while they call home for help.
-  
+
     Their computer detects a list of nearby planets that have Oxygen in their atmosphere.
 
     To be safe, they need to land on the first unnamed planet that has Oxygen levels between 19.5% and 23.5%.
 
     Write a function that finds the oxygen level of the first safe planet - Oxygen between 19.5% and 23.5%
 
-    Some string methods that might help you here are .replace() and .substring(). 
+    Some string methods that might help you here are .replace() and .substring().
 */
 
-function safeLevels() {}
+function safeLevels(oxygenLevels)
+{
+  // extract oxygen levels with the "%" symbol
+  let numOxygenLevels =
+    oxygenLevels.map(level => level.substr(0, level.length-1));
+
+  // Find the very first safe oxygen level
+  let safeLevels =
+    numOxygenLevels.find(level => (level > 19.5 && level < 23.5));
+
+  return safeLevels + "%";
+}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
